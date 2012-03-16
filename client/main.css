@@ -1,0 +1,339 @@
+html {
+	padding: 0px;
+	margin: 0px;
+	font-family: sans-serif;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background: #000;
+	user-select: none;
+}
+
+#loading {
+	background: url('loading.gif') center no-repeat #000;
+	opacity: 0.7;
+	position: absolute;
+	z-index:10000;
+	bottom: 0px;
+	right: 0px;
+}
+
+#title {
+	float:left;
+	height: 50px;
+}
+
+#title div {
+	margin: 8px;
+	font-size: 30px;
+	color: white;
+	font-family: sans-serif;
+	text-shadow: 0px 0px 0.2em black;
+}
+
+#top {
+	height: 50px;
+	background: #0044B1;
+	clear: both;
+	border-bottom: 2px solid #000;
+	/*box-shadow: 0px 0px 5px #000;*/
+	z-index: 1000;
+}
+
+#stack {
+	#background: #0F0;
+	display: block;
+	height: 35px;
+	white-space: nowrap;
+	position: relative;
+	
+	background: rgb(109,179,242); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(109,179,242,1) 0%, rgba(84,163,238,1) 50%, rgba(54,144,240,1) 51%, rgba(30,105,222,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(109,179,242,1)), color-stop(50%,rgba(84,163,238,1)), color-stop(51%,rgba(54,144,240,1)), color-stop(100%,rgba(30,105,222,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(109,179,242,1) 0%,rgba(84,163,238,1) 50%,rgba(54,144,240,1) 51%,rgba(30,105,222,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(109,179,242,1) 0%,rgba(84,163,238,1) 50%,rgba(54,144,240,1) 51%,rgba(30,105,222,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(109,179,242,1) 0%,rgba(84,163,238,1) 50%,rgba(54,144,240,1) 51%,rgba(30,105,222,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(109,179,242,1) 0%,rgba(84,163,238,1) 50%,rgba(54,144,240,1) 51%,rgba(30,105,222,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', endColorstr='#1e69de',GradientType=0 ); /* IE6-9 */
+	
+	box-shadow: 0px 0px 10px #000;
+	border-bottom: 2px solid #000;
+	z-index: 1000;
+
+}
+
+#stack ul {
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	white-space: nowrap;
+	display: block;
+	position: absolute;
+	padding-left: 10px;
+	margin-left:-5px;
+}
+
+#stack ul li {
+	display: inline-block;
+	margin-left: -10px;
+}
+
+#stack ul li div {
+	padding-right: 15px;
+	display: inline-block;
+	position: relative;
+	background: url('stack_bar.png') right no-repeat;
+	background-position: 100% 0px;
+}
+
+#stack ul li:hover div {
+	background-position: 100% -80px;
+}
+
+#stack ul li div span {
+	height: 35px;
+	padding-left: 15px;
+	color: #fff;
+	font-size: 20px;
+	padding-top:5px;
+	display: inline-block;
+}
+
+#stack ul li div.active span {
+	background: #4E8BED;
+}
+
+#stack ul li:hover div span {
+	background: rgba(255,255,255,0.24);
+}
+
+#stack ul li div.active {
+	background-position: 100% -40px;
+}
+
+#stack ul li:hover div.active {
+	background-position: inherit;
+}
+
+#stack ul li:hover div.active span {
+	background: #4E8BED;
+}
+
+
+
+#user {
+	background: url("personalise.png") center no-repeat #5174AC;
+	border-left: 2px solid #000;
+	margin-left: -2px;
+	display: block;
+	float: left;
+	height: 50px;
+	width: 50px;
+}
+
+div {
+	overflow: hidden;
+}
+
+.iconview {
+	border-radius: 7px;
+	background: #000;
+	margin: 10px;
+	float: left;
+	width: 80px;
+	height: 80px;
+	padding: 4px;
+	position: relative;
+	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.9);
+	font-family: sans-serif;
+	border: 3px solid #ddd;
+	cursor: pointer;
+}
+
+.iconview span {
+	bottom: 0px;
+	display: block;
+	position: absolute;
+	text-align: center;
+	width: 80px;
+	color: #fff;
+	background: #000;
+	opacity: 0.6;
+	z-index: 1000;
+}
+
+.iconview img {
+	width: 80px;
+	height: 80px;
+	display: block;
+}
+
+.arrayview {
+	
+}
+
+.arrayview .sectiondiv {
+	background: #aaa;
+}
+
+.arrayview .spacer {
+	clear:both;
+	display: block;
+}
+
+.arrayview .sectiontitle {
+	display: block;
+	border-bottom: 2px #eee solid;
+}
+
+div.wrapper {
+	position: relative;
+}
+
+.spacer {
+	clear: both;
+}
+
+#content ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+#content ul li {
+	padding: 0px;
+	margin: 0px;
+}
+
+#content ul li div {
+	padding: 10px;
+	border-bottom: 1px solid #aaa;
+}
+
+#content ul li div:hover {
+	background: #aaa;
+}
+
+
+
+.foodInfo {
+	padding: 10px;
+}
+
+.foodInfo span.ingredients {
+	font-style:italic;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.foodInfo span.ingredients:before {
+	content: 'Ingredients: '
+}
+
+.foodInfo span.vendor {
+	font-style:italic;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.foodInfo span.vendor:before {
+	content: 'Vendors: '
+}
+
+.foodInfo span.serving {
+	font-style: italic;
+	display: block;
+}
+
+.foodInfo span.serving:before {
+	content: 'All %RDI are shown for a regular serving size of ';
+}
+
+.foodInfo span.serving:after {
+	content: ' grams.';
+}
+
+.foodInfo span.source {
+	font-style: italic;
+	display: block;
+}
+
+.foodInfo span.source:before {
+	content: 'Dietary information about this food has been sourced from ';
+}
+
+.foodInfo span.source:after {
+	content: '.';
+}
+
+.foodInfo span.detail {
+	display: block;
+	border-bottom: 1px solid #000;
+	width: 100%;
+	clear: both;
+	border-radius: 5px;
+	border: 1px solid #0044B1;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+	overflow: hidden;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+.foodInfo span.detail span {
+	padding: 10px;
+	height: 20px;
+	overflow: hidden;
+}
+
+.foodInfo span.detail span.value {
+	position: relative;
+	display:block;
+	background: #aaa;
+	overflow: hidden;
+	height: 20px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.foodInfo span.detail span.value span.progress {
+	position: absolute;
+	display: block;
+	top: -5px;
+	height: 100%;
+	left: 0px;
+	background: #0DB100;
+}
+
+.foodInfo span.detail span.value span.progress_text {
+	position: absolute;
+	display: block;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 20px;
+	padding-top: 12px;
+	text-align: center;
+}
+
+.foodInfo span.key {
+	border-right: 1px solid #000;
+	display: inline-block;
+	background: #fff;
+	float: left;
+	clear: both;
+	font-size: large;
+	width: 120px;
+	text-align: center;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+/*.foodInfo span.key:after {
+	content: ":";
+}*/
